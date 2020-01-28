@@ -25,6 +25,7 @@ SECRET_KEY = '93fs*#h77*vj&2#2f+!y=kifg0s&63768398a(kx126itq(*6r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 ALLOWED_HOSTS = ['*']
+
 MARTOR_ENABLE_CONFIGS = {
     'emoji': 'true',       # to enable/disable emoji icons.
     'imgur': 'true',       # to enable/disable imgur/custom uploader.
@@ -128,9 +129,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-
-# STATIC_ROOT = os.path.join(tempfile.gettempdir(), 'martor_static')
-# MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'martor_media')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
