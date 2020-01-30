@@ -8,7 +8,7 @@ blocks:
   - name: Build
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Setup
           commands:
             - sem-version python 3.7
             - checkout
@@ -41,3 +41,8 @@ blocks:
           commands:
             - pip install flake8
             - flake8 martor_demo/ --max-line-length=127
+promotions:
+  - name: Dockerize
+    pipeline_file: pipeline_2.yml
+    auto_promote:
+      when: branch = 'master' AND result = 'passed'
